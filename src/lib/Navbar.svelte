@@ -11,7 +11,17 @@
 
 <nav class="w-full h-14 fixed flex justify-between items-center">
     <div class="align-middle mx-5 font-bold text-xl">
-        <p>Jonathan Schaaij</p>
+        <button
+            on:click={() => {
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth",
+                });
+            }}
+        >
+            Jonathan Schaaij
+        </button>
     </div>
     <div class="mx-5 flex flex-row">
         <!-- Language Selector -->
