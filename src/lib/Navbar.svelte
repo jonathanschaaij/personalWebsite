@@ -10,7 +10,7 @@
 </script>
 
 <nav class="w-full h-14 fixed flex justify-between items-center">
-    <div class="align-middle mx-5 font-bold text-xl">
+    <div class="align-middle mx-5 font-bold text-2xl">
         <button
             on:click={() => {
                 window.scroll({
@@ -31,10 +31,7 @@
           <option value="DE">DE</option>
           <option value="NL">NL</option>
         </select> -->
-
         <!-- Dark-mode Toggle -->
-        <button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />
-
         <label class="h-10 w-10 swap swap-rotate">
             <!-- this hidden checkbox controls the state -->
             <input type="checkbox" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />

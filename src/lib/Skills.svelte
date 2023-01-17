@@ -24,11 +24,12 @@
     ];
 </script>
 
-<div class="w-3/4 h-1/2 grid grid-cols-4 gap-10 items-center">
-    <div class="text-6xl font-bold">Skills</div>
-    <div class="">
+<div class="w-full lg:w-3/4 h-1/2 grid grid-cols-1 lg:grid-cols-4 gap-10 items-center">
+    <div class="col-span-1 text-6xl font-bold text-center">Skills</div>
+    <div class="col-span-1 ">
         {#each skills as skill, i}
             <div
+                class=""
                 on:mouseenter={() => {
                     activeskill = i;
                     skills.forEach((item) => {
@@ -43,5 +44,5 @@
             </div>
         {/each}
     </div>
-    <div class="col-span-2 text-justify text-lg">{skills[activeskill].info}</div>
+    <div class="px-2 lg:px-4 lg:col-span-2 text-justify text-sm md:text-lg">{skills[activeskill].info}</div>
 </div>

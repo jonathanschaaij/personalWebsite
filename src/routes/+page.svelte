@@ -14,15 +14,13 @@
 </script>
 
 <Navbar />
-<div class="snap-mandadory snap-both">
-    <div class="snap-always snap-center w-full h-screen flex flex-col justify-center">
-        <div class="h-3/5 flex flex-row justify-center">
-            <Hero />
-        </div>
-    </div>
-    <div class="snap-always snap-center w-full h-screen flex flex-col justify-center items-center">
-        <Skills />
-    </div>
+
+<div class="w-full h-screen flex flex-col justify-center">
+    <Hero />
+</div>
+<div class="w-full h-screen bg-base-200 flex flex-col justify-center items-center">
+    <Skills />
 </div>
 
 <Footer />
+ls
