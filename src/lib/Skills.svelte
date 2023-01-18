@@ -24,12 +24,11 @@
     ];
 </script>
 
-<div class="w-4/5 h-1/2 grid grid-cols-1 xl:grid-cols-3 gap-10 items-center">
+<div class="w-4/5 h-1/2 grid grid-cols-1 xl:grid-cols-4 gap-10 items-center">
     <div class="col-span-1 text-6xl font-bold text-center">Skills</div>
-    <div class="col-span-1 ">
+    <div class="col-span-1">
         {#each skills as skill, i}
             <div
-                class=""
                 on:mouseenter={() => {
                     activeskill = i;
                     skills.forEach((item) => {
@@ -37,12 +36,15 @@
                     });
                     skill.active = true;
                 }}
+                class="text-xl transition-all duration-500 text-center p-5 my-2 border-2 rounded-full"
+                class:bg-primary={skill.active}
+                class:text-white={skill.active}
             >
-                <div class="text-xl py-5 px-10 border rounded-full m-2" class:bg-primary={skill.active}>
-                    {skill.title}
-                </div>
+                {skill.title}
             </div>
         {/each}
     </div>
-    <div class="px-2 xl:px-4 col-span-1 text-justify text-sm md:text-lg">{skills[activeskill].info}</div>
+    <div class="card  px-2 xl:px-4 col-span-2 text-justify text-sm md:text-lg transition:fade">
+        {skills[activeskill].info}
+    </div>
 </div>
