@@ -24,27 +24,29 @@
     ];
 </script>
 
-<div class="w-4/5 h-1/2 grid grid-cols-1 xl:grid-cols-4 gap-10 items-center">
-    <div class="col-span-1 text-6xl font-bold text-center">Skills</div>
-    <div class="col-span-1">
-        {#each skills as skill, i}
-            <div
-                on:mouseenter={() => {
-                    activeskill = i;
-                    skills.forEach((item) => {
-                        item.active = false;
-                    });
-                    skill.active = true;
-                }}
-                class="text-xl transition-all duration-500 text-center p-5 my-2 border-2 rounded-full"
-                class:bg-primary={skill.active}
-                class:text-white={skill.active}
-            >
-                {skill.title}
-            </div>
-        {/each}
-    </div>
-    <div class="card  px-2 xl:px-4 col-span-2 text-justify text-sm md:text-lg transition:fade">
-        {skills[activeskill].info}
+<div class="">
+    <div class="min-h-screen bg-base-200 p-12 justify-around items-center flex flex-col lg:flex-row">
+        <div class="text-6xl font-bold text-center m-5">Skills</div>
+        <div class="grid grid-cols-2 lg:grid-cols-1 gap-5">
+            {#each skills as skill, i}
+                <div
+                    on:mouseenter={() => {
+                        activeskill = i;
+                        skills.forEach((item) => {
+                            item.active = false;
+                        });
+                        skill.active = true;
+                    }}
+                    class="font-bold transition-all ease-in-out duration-500 text-center p-3 lg:p-5 border-2 rounded-full"
+                    class:border-secondary={skill.active}
+                    class:text-secondary={skill.active}
+                >
+                    {skill.title}
+                </div>
+            {/each}
+        </div>
+        <div class="lg:w-1/2 lg:text-lg p-2 text-justify">
+            {skills[activeskill].info}
+        </div>
     </div>
 </div>

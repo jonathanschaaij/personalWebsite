@@ -24,7 +24,8 @@ You can preview the production build with `npm run preview`.
 
 
 ## TODO:
-- Add LinkedIn to socials
 - Add about me section with images
+    - Add a scouting image
+    - Add the text
 - netlify contact form at the bottom?
 
