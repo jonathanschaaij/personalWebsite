@@ -21,3 +21,10 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+
+## TODO:
+- Add LinkedIn to socials
+- Add about me section with images
+- netlify contact form at the bottom?
+
