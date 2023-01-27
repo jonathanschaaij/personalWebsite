@@ -1,4 +1,4 @@
-<div class="h-screen flex flex-col justify-evenly items-center sm:flex-row">
+<div class="h-screen flex flex-col justify-evenly items-center sm:flex-row snap-start">
     <div class="h-1/2 mt-14">
         <img class="rounded-full max-h-full max-w-full" src="images/portrait.png" alt="Jonathans Face" />
     </div>

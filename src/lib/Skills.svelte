@@ -21,32 +21,35 @@
             title: "3D Printing",
             info: "With a deep understanding of 3D printing technology, I have put my skills to use by running my own 3D printer at home. I have experience in preparing 3D models for printing, including slicing, adding support structures, and using rafts. Additionally, I have upgraded my printer with Mainsail and Klipper, a Raspberry Pi, and a Camera, which has allowed me to have greater control over the printer and improve the print quality. I am proficient in using various software such as Cura and PrusaSlicer for the preparation of 3D models for printing. Moreover, I possess knowledge of maintenance and problem solving, which I have gained through hands-on experience with my own printer. I am familiar with common issues such as clogged nozzles, layer shifting and warping, and have the ability to troubleshoot and fix them.",
         },
+        //{
+        //  active: false,
+        //    title: "Machine Learning",
+        //    info: "During my studies if have followed multiple courses about machine learning and artificial intelligence. I am excited about its current development and it's influence on society, which is why I am a actively using and testing tools such as CHAT-GPT.",
+        //},
     ];
 </script>
 
-<div class="">
-    <div class="min-h-screen bg-base-200 p-12 justify-around items-center flex flex-col lg:flex-row">
-        <div class="text-6xl font-bold text-center m-5">Skills</div>
-        <div class="grid grid-cols-2 lg:grid-cols-1 gap-5">
-            {#each skills as skill, i}
-                <div
-                    on:mouseenter={() => {
-                        activeskill = i;
-                        skills.forEach((item) => {
-                            item.active = false;
-                        });
-                        skill.active = true;
-                    }}
-                    class="font-bold transition-all ease-in-out duration-500 text-center p-3 lg:p-5 border-2 rounded-full"
-                    class:border-secondary={skill.active}
-                    class:text-secondary={skill.active}
-                >
-                    {skill.title}
-                </div>
-            {/each}
-        </div>
-        <div class="lg:w-1/2 lg:text-lg p-2 text-justify">
-            {skills[activeskill].info}
-        </div>
+<div class="min-h-screen bg-base-200 p-12 justify-around items-center flex flex-col lg:flex-row snap-start">
+    <div class="text-6xl font-bold text-center m-5">Skills</div>
+    <div class="grid grid-cols-2 lg:grid-cols-1 gap-5">
+        {#each skills as skill, i}
+            <div
+                on:mouseenter={() => {
+                    activeskill = i;
+                    skills.forEach((item) => {
+                        item.active = false;
+                    });
+                    skill.active = true;
+                }}
+                class="font-bold transition-all ease-in-out duration-500 text-center p-3 lg:p-5 border-2 rounded-full"
+                class:border-secondary={skill.active}
+                class:text-secondary={skill.active}
+            >
+                {skill.title}
+            </div>
+        {/each}
+    </div>
+    <div class="lg:w-1/2 lg:text-lg p-2 text-justify">
+        {skills[activeskill].info}
     </div>
 </div>

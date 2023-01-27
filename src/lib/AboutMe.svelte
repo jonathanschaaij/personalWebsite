@@ -2,11 +2,17 @@
     import { fly } from "svelte/transition";
 
     let hovering = false;
+    let innerHeight = 0;
+    let innerWidth = 0;
+
+    $: showImageOnSide = hovering && innerWidth > 1024;
 </script>
 
-<div class="w-full h-screen">
+<svelte:window bind:innerWidth bind:innerHeight />
+
+<div class="min-h-screen items-center flex snap-start">
     <div
-        class="grid grid-cols-1 xl:grid-cols-3 h-full w-full"
+        class="grid grid-cols-1 lg:grid-cols-3 w-screen p-10  items-center justify-items-center"
         on:mouseenter={() => {
             hovering = true;
         }}
@@ -14,16 +20,16 @@
             hovering = false;
         }}
     >
-        {#if hovering}
+        {#if showImageOnSide}
             <img
-                class="col-span-1 h-3/4 max-w-full rounded-3xl m-10 aspect-auto"
+                class="col-span-1 max-h-full w-3/4 mx-10 rounded-3xl"
                 transition:fly={{ x: -400, duration: 1000 }}
                 src="images/skydive.jpeg"
                 alt="Skydiving"
             />
         {/if}
-        <div class="flex flex-col col-start-2 justify-center">
-            <div class="text-3xl text-center">About Me</div>
+        <div class="flex flex-col col-start-2">
+            <div class="text-3xl text-center my-10">About Me</div>
             <div class="text-justify">
                 I am currently a student studying for my masters in Robotics at the University of Twente. Additionally I
                 have two part time jobs as a full stack developer and as a proptype engineer. I volunteer once a week at
@@ -34,9 +40,9 @@
             </div>
         </div>
 
-        {#if hovering}
+        {#if showImageOnSide}
             <img
-                class="col-span-1 max-h-3/4 w-3/4 rounded-3xl m-10 aspect-auto"
+                class="col-span-1 max-h-full w-3/4 mx-10 rounded-3xl"
                 transition:fly={{ x: 400, duration: 1000 }}
                 src="images/skydive.jpeg"
                 alt="Skydiving"
