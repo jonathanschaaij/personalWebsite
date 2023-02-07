@@ -23,6 +23,10 @@
     console.log(bigLetters);
 </script>
 
+<svelte:head>
+    <title>Hire Jonathan</title>
+</svelte:head>
+
 <Navbar />
 
 <div class="w-screen h-screen snap-y snap-mandatory overflow-scroll">

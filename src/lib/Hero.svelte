@@ -16,7 +16,7 @@
         <div class="flex flex-row justify-evenly h-full">
             <a
                 class="xl:w-64 xl:h-24 xl:text-2xl btn btn-lg btn-primary mx-10 transition duration-200 hover:-translate-y-0.5 hover:scale-110 hover:border"
-                href="mailto:contact@jschaaij.nl?subject=You're hired"
+                href="mailto:contact@jschaaij.nl?subject=You're%20hired"
                 target="_blank">Contact</a
             >
             <a
